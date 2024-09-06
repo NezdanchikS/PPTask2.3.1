@@ -39,8 +39,13 @@ public class UserController {
 
     @RequestMapping("/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
-
         userService.saveUser(user);
+        return "redirect:/";
+    }
+
+    @RequestMapping("/updateUser")
+    public String updateUser(@ModelAttribute("user") User user){
+        userService.updateUser(user);
         return "redirect:/";
     }
 

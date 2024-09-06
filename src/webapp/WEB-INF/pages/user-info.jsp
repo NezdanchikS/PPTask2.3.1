@@ -10,7 +10,7 @@
 <h2>User info</h2>
 <br>
 
-<form:form action="saveUser" modelAttribute="user">
+<form:form action="${user.id == null ? 'saveUser' : 'updateUser'}" modelAttribute="user">
 
     <form:hidden path="id"/>
 
